@@ -1,0 +1,549 @@
+body {
+    padding-top: 50px;
+}
+
+.navbar-header {
+    font-family: 'Kaushan Script', cursive;
+}
+
+.navbar{
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+}
+
+.carousel{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1368px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.carousel img{
+    width: 100%;
+    max-height: 450px;
+    min-height: 250px;
+    object-fit: cover;
+}
+
+.carousel-caption{
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+}
+
+.carousel h1{
+    padding: 6px;
+    margin: 0;
+}
+
+.carousel h4{
+    padding: 6px;
+    margin: 0;
+}
+
+.carousel .btn{
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.columnInners{
+    font-family: 'Roboto', sans-serif;
+}
+
+.homePageInfo h3{
+    font-weight: bold;
+}
+
+.homePageInfo td:first-child {
+    padding-right: 14px;
+}
+
+.homePageInfo td p{
+    margin-bottom: 6px;
+}
+
+.homePageInfo th{
+    margin-bottom: 6px;
+}
+
+#contactButton {
+    margin-top: 6px;
+    display: inline-block;
+}
+
+#groupHours{
+    display: inline-block;
+}
+
+#hours{
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+}
+
+#groupMapAddress{
+    display: inline-block;
+}
+
+#miniMap{
+    display: inline-block;
+    border: 2px solid black;
+    margin-right: 10px;
+    vertical-align: top;
+}
+
+#miniMap:hover{
+    border: 2px solid red;
+}
+
+#address{
+    display: inline-block;
+    margin-top: 6px;
+    margin-bottom: 0;
+    vertical-align: top;
+    margin-right: 6px;
+}
+
+#OSM{
+    border: 1px solid black;
+    width: 100%;
+    height: 700px;
+    margin-top: 14px;
+}
+
+#fruitButtonDiv{
+    margin-top: 20px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+
+#fruitBox img{
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+    display: inline-block;
+}
+
+#fruitBoxButton{
+    margin-top: 10px;
+}
+
+.newsItemHomepage{
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    color: black;
+}
+
+.newsItemHomepage:hover {
+    color: midnightblue;
+}
+
+.newsItemHomepage h4{
+    margin: 8px 12px 2px 12px;
+}
+
+.newsItemHomepage p{
+    padding: 0 12px;
+}
+
+.newsItemHomepage .miniDate{
+    font-size: smaller;
+}
+
+footer{
+    box-sizing: border-box;
+    margin-top: 10px;
+    padding-top: 10px;
+    text-align: center;
+    height: 52px;
+    background-color: #dddddd;
+}
+
+footer table {
+    width: 100%;
+}
+
+footer .container {
+}
+
+footer td {
+    width: 50%;
+}
+
+footer td:first-child {
+    text-align: left;
+}
+
+footer td:last-child {
+    text-align: right;
+}
+
+footer table img {
+    padding-left: 15px;
+}
+
+footer a{
+    color: #444444;
+}
+
+.contactPage {
+    padding-top: 10px;
+}
+
+.contactPage h4{
+    margin-bottom: 4px;
+    margin-top: 18px;
+}
+
+#contactFormButton{
+    margin-top: 12px;
+}
+
+.contactSubmitButton{
+    text-align: right;
+}
+
+.modalExtension{
+    margin-top: 15px;
+}
+
+.modalExtensionButton{
+    text-align: right;
+}
+
+.fruitboxSubmitButton{
+    text-align: right;
+}
+
+.fruitBoxCardsContainer{
+    font-family: 'Roboto', sans-serif;
+}
+
+.fruitBoxCardsTitle{
+    text-align: center;
+}
+
+.fruitBoxCardsRow{
+    text-align: center;
+}
+
+.col-centered{
+    display: inline-block;
+    float: none;
+    text-align: left;
+}
+
+.fruitBoxCard{
+    background-color: #eeffdd;
+    max-width: 360px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+}
+
+.fruitBoxCardImgContainer{
+    padding: 8px;
+}
+
+.fruitBoxCard img{
+    width: 100%;
+}
+
+.fruitBoxCard h3{
+    text-align: center;
+    padding:8px 8px 0 8px;
+    margin: 0;
+}
+
+.fruitBoxCard p{
+    padding: 5px 8px;
+    text-align: center;
+}
+
+.fruitBoxCard ul{
+    display: inline-block;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.fruitBoxCard li{
+    list-style-type: none;
+    text-align: left;
+}
+
+.fruitBoxOrder{
+    margin-top: 4px;
+    text-align: center;
+}
+
+.fruitBoxBenefits{
+    text-align: center;
+}
+
+.fruitBoxBenefits p{
+    font-size: large;
+}
+
+.fruitBoxFormChoices{
+    text-align: left;
+}
+
+.fruitBoxFormChoices table{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 10px;
+}
+
+.fruitBoxFormChoices td{
+    padding: 5px 10px;
+}
+
+.fruitBoxFormChoices .btn-group{
+    margin-bottom: 0;
+}
+
+.newsContainer{
+    font-family: 'Roboto', sans-serif;
+}
+
+.newsStory{
+    display: inline-block;
+    border: 2px solid black;
+    margin-bottom: 15px;
+    background-color: #eeffdd;
+}
+
+.newsStory img{
+    margin: 15px;
+    width: 35%;
+    min-width: 150px;
+}
+
+.newsStoryLeft img{
+    float: left;
+}
+
+.newsStoryRight img, video{
+    float: right;
+}
+
+.newsStory h3{
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0 15px;
+}
+
+.newsText{
+    font-size: 1.1em;
+    margin: 15px;
+}
+
+.newsDate{
+    font-size: 0.9em;
+    margin: 5px 15px 15px 15px;
+}
+
+.guideContainer{
+    font-family: 'Roboto', sans-serif;
+}
+
+.guide{
+    display: inline-block;
+    border: 2px solid black;
+    margin-bottom: 15px;
+    background-color: #eeffdd;
+}
+
+.guide h3{
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding: 0 15px;
+}
+
+.guideText{
+    font-size: 1.1em;
+    margin: 15px;
+}
+
+.guideDate{
+    font-size: 0.9em;
+    margin: 5px 15px 15px 15px;
+}
+
+.guide video{
+    margin: 15px;
+    width: 50%;
+    min-width: 220px;
+}
+
+.subscribeContainer{
+    padding: 0 12px 12px 12px;
+    border: 2px solid black;
+    margin-bottom: 15px;
+}
+
+.subscribeButtonDiv{
+    text-align: right;
+}
+
+.privacyTermsPage {
+    font-family: 'Roboto', sans-serif;
+}
+
+.produceContainer{
+    font-family: 'Roboto', sans-serif;
+}
+
+.produceCatSelector{
+    max-width: 500px;
+    margin: 20px 0;
+}
+
+.productRow{
+    text-align: center;
+}
+
+.productContainer{
+    max-width: 360px;
+    margin-bottom: 20px;
+}
+
+.productContainer img{
+    width: 100%;
+    height: 100%;
+}
+
+.productContainer p{
+    padding: 4px 0 0 0;
+    font-size: 1.2em;
+    color: #333333;
+    margin-bottom: 16px;
+}
+
+.productDetail{
+    font-family: 'Roboto', sans-serif;
+}
+
+.productDetail h4{
+    margin-top: 0;
+    margin-bottom: 6px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.productDetail p{
+    padding-left: 20px;
+    padding-right: 20px;
+
+}
+
+.productDetail .productImage{
+    padding: 0 20px 10px 20px;
+    width: 100%;
+    height: 100%;
+}
+
+.productDetailButtonRow{
+    padding-bottom: 10px;
+}
+
+.productDetail .closeButton{
+    text-align: right;
+}
+
+form span{
+    color: grey;
+    font-weight: normal;
+}
+
+.modal {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+    #OSM{
+        height: 600px;
+    }
+    .guide video{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .columnInners{
+        border-bottom: 2px solid #888888;
+        padding-bottom: 16px;
+    }
+    .noDivider{
+        border-bottom: 0;
+        padding-bottom: 0;
+    }
+    #OSM{
+        height: 500px;
+    }
+    .guide video{
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+}
+
+/* Extra Small Devices, Phones */
+@media screen and (max-width : 480px) {
+    #OSM{
+        height: 300px;
+    }
+
+    .carousel h1{
+        font-size: 1.5em;
+    }
+
+    .carousel h4{
+        font-size: 1.1em;
+    }
+
+    .productDetail .productImage{
+        padding: 0 6px 8px 6px;
+    }
+
+    .productDetail p{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .productDetail h4{
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+@media screen and (max-width : 360px) {
+    .newsStory img{
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+}
+
+/* Custom, iPhone Retina */
+@media screen and (max-width : 320px) {
+    #OSM{
+        height: 200px;
+    }
+
+    .productDetail .productImage{
+        padding: 0 4px 6px 4px;
+    }
+
+    .productDetail p{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .productDetail h4{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}

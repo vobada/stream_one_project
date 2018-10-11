@@ -1,0 +1,31 @@
+<div class="modal fade productModal" id="modal-produce">
+    <section class="modal-dialog">
+        <div class="modal-content">
+            <article class="productDetail">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <figure>
+                    <img ng-src="{{productModal.imageFile}}" width="720" height="480" alt="{{productModal.name}}"
+                         class="productImage">
+                    <figcaption>
+                        <h4 class="detailTitle">{{productModal.name}}</h4>
+                        <p class="detailDescription">{{productModal.description}}</p>
+                    </figcaption>
+                </figure>
+                <section class="row productDetailButtonRow">
+                    <div class="col-xs-6">
+                        <p id="shareButton">
+                            <button type="button" class="btn btn-success">Share</button>
+                        </p>
+                    </div>
+                    <div class="col-xs-6">
+                        <p class="closeButton">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal"
+                                    ng-click="productModal.imageFile = '/img/loading.png'">Close
+                            </button>
+                        </p>
+                    </div>
+                </section>
+            </article>
+        </div>
+    </section>
+</div>

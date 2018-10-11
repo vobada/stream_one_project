@@ -1,0 +1,172 @@
+<div class="modal fade" id="modal-fruitBoxForm">
+    <section class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Order a fruit box.</h4>
+                <p class="modal-title">Complete all details to get an immediate price.<p>
+            </div>
+            <section class="modal-body">
+                <form name="fruitboxForm" ng-submit="submitForm()" novalidate>
+                    <div class="fruitBoxFormChoices">
+                        <label>Order details
+                        </label>
+                        <table>
+                            <tr>
+                                <td>Order type:</td>
+                                <td>
+                                    <div class="form-group btn-group" data-toggle="buttons" id="subsGroup">
+                                        <label class="btn btn-default subscriptionRadio" id="subsfalse"
+                                               ng-click="selectSubs = false"
+                                               ng-class="{ 'active': selectSubs == false }">
+                                            <input type="radio" autocomplete="off" name="subs" ng-model="customer.subs"
+                                                   class="form-control" value="false" ng-required="!customer.subs">
+                                            Single order
+                                        </label>
+                                        <label class="btn btn-default subscriptionRadio" id="substrue"
+                                               ng-click="selectSubs = true"
+                                               ng-class="{ 'active': selectSubs == true }">
+                                            <input type="radio" autocomplete="off" name="subs" ng-model="customer.subs"
+                                                   class="form-control" value="true" ng-required="!customer.subs">
+                                            Weekly subscription
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Delivery day:</td>
+                                <td>
+                                    <div class="form-group btn-group" data-toggle="buttons">
+                                        <label class="btn btn-default deliveryDay" id="selectMon"
+                                               ng-click="selectDay = 'mon'" ng-class="{ 'active': selectDay == 'mon' }">
+                                            <input type="radio" autocomplete="off" name="day" class="form-control"
+                                                   ng-model="customer.day" value="Monday"
+                                                   ng-required="!customer.day">Mon
+                                        </label>
+                                        <label class="btn btn-default deliveryDay" id="selectTue"
+                                               ng-click="selectDay = 'tue'" ng-class="{ 'active': selectDay == 'tue' }">
+                                            <input type="radio" autocomplete="off" name="day" class="form-control"
+                                                   ng-model="customer.day" value="Tuesday"
+                                                   ng-required="!customer.day">Tue
+                                        </label>
+                                        <label class="btn btn-default deliveryDay" id="selectWed"
+                                               ng-click="selectDay = 'wed'" ng-class="{ 'active': selectDay == 'wed' }">
+                                            <input type="radio" autocomplete="off" name="day" class="form-control"
+                                                   ng-model="customer.day" value="Wednesday"
+                                                   ng-required="!customer.day">Wed
+                                        </label>
+                                        <label class="btn btn-default deliveryDay" id="selectThu"
+                                               ng-click="selectDay = 'thu'" ng-class="{ 'active': selectDay == 'thu' }">
+                                            <input type="radio" autocomplete="off" name="day" class="form-control"
+                                                   ng-model="customer.day" value="Thursday"
+                                                   ng-required="!customer.day">Thu
+                                        </label>
+                                        <label class="btn btn-default deliveryDay" id="selectFri"
+                                               ng-click="selectDay = 'fri'" ng-class="{ 'active': selectDay == 'fri' }">
+                                            <input type="radio" autocomplete="off" name="day" class="form-control"
+                                                   ng-model="customer.day" value="Friday"
+                                                   ng-required="!customer.day">Fri
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Time slot:</td>
+                                <td>
+                                    <div class="form-group btn-group" data-toggle="buttons">
+                                        <label class="btn btn-default deliverySlot" id="slot1"
+                                               ng-click="selectSlot = '1'" ng-class="{ 'active': selectSlot == '1' }">
+                                            <input type="radio" autocomplete="off" class="form-control"
+                                                   ng-model="customer.slot" value="8 to 10"
+                                                   ng-required="!customer.slot">8 - 10
+                                        </label>
+                                        <label class="btn btn-default deliverySlot" id="slot2"
+                                               ng-click="selectSlot = '2'" ng-class="{ 'active': selectSlot == '2' }">
+                                            <input type="radio" autocomplete="off" class="form-control"
+                                                   ng-model="customer.slot" value="10 to 12"
+                                                   ng-required="!customer.slot">10 - 12
+                                        </label>
+                                        <label class="btn btn-default deliverySlot" id="slot3"
+                                               ng-click="selectSlot = '3'" ng-class="{ 'active': selectSlot == '3' }">
+                                            <input type="radio" autocomplete="off" class="form-control"
+                                                   ng-model="customer.slot" value="12 to 2"
+                                                   ng-required="!customer.slot">12 - 2
+                                        </label>
+                                        <label class="btn btn-default deliverySlot" id="slot4"
+                                               ng-click="selectSlot = '4'" ng-class="{ 'active': selectSlot == '4' }">
+                                            <input type="radio" autocomplete="off" class="form-control"
+                                                   ng-model="customer.slot" value="2 to 4"
+                                                   ng-required="!customer.slot">2 - 4
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Box size:</td>
+                                <td>
+                                    <div class="form-group btn-group" data-toggle="buttons">
+                                        <label class="btn btn-default boxSize" id="boxMini"
+                                               ng-click="selectBox = 's'" ng-class="{ 'active': selectBox == 's' }">
+                                            <input type="radio" autocomplete="off" class="form-control"
+                                                   ng-model="customer.boxType" value="Mini"
+                                                   ng-required="!customer.boxType">Mini
+                                        </label>
+                                        <label class="btn btn-default boxSize" id="boxMedium"
+                                               ng-click="selectBox = 'm'" ng-class="{ 'active': selectBox == 'm' }">
+                                            <input type="radio" autocomplete="off" class="form-control"
+                                                   ng-model="customer.boxType" value="Medium"
+                                                   ng-required="!customer.boxType">Medium
+                                        </label>
+                                        <label class="btn btn-default boxSize" id="boxMaxi"
+                                               ng-click="selectBox = 'l'" ng-class="{ 'active': selectBox == 'l' }">
+                                            <input type="radio" autocomplete="off" class="form-control"
+                                                   ng-model="customer.boxType" value="Maxi"
+                                                   ng-required="!customer.boxType">Maxi
+                                        </label>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Name
+                            <span ng-show="fruitboxForm.name.$pristine">(required)</span>
+                        </label>
+                        <input type="text" name="name" class="form-control" ng-model="customer.name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email
+                            <span ng-show="fruitboxForm.email.$pristine">(required)</span>
+                        </label>
+                        <input type="text" name="email" class="form-control" ng-model="customer.email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Telephone
+                            <span ng-show="fruitboxForm.phone.$pristine">(required)</span>
+                        </label>
+                        <input type="text" name="phone" class="form-control" ng-model="customer.phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Address
+                            <span ng-show="fruitboxForm.address.$pristine">(required)</span>
+                        </label>
+                        <input type="text" name="address" class="form-control" ng-model="customer.address" required>
+                    </div>
+                    <div class="fruitboxSubmitButton">
+                        <button type="submit" class="btn btn-primary" ng-disabled="fruitboxForm.$invalid">
+                            Get quote
+                        </button>
+                    </div>
+                </form>
+                <section class="modalExtension" ng-show="orderSubmitted">
+                    <p>{{quote}}</p>
+                    <p>This is a fictitious website.  Your cannot place an order.</p>
+                    <div class="modalExtensionButton">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+                </section>
+            </section>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,79 @@
+<navbar></navbar>
+
+<section class="container produceContainer">
+    <div class="row productRow">
+        <div class="col-sm-12 col-centered">
+            <nav class="btn-group btn-group-lg produceCatSelector" aria-label="Product type selection">
+                <ul class="nav nav-pills">
+                    <li ng-click="showProduct = 'fruit'" id="fruitButton" role="presentation"
+                        ng-class="{ 'active': showProduct == 'fruit' }">
+                        <a href="">Fruit</a>
+                    </li>
+                    <li ng-click="showProduct = 'veg'" id="vegButton" role="presentation"
+                        ng-class="{ 'active': showProduct == 'veg' }">
+                        <a href="">Vegetables</a>
+                    </li>
+                    <li ng-click="showProduct = 'other'" id="otherButton" role="presentation"
+                        ng-class="{ 'active': showProduct == 'other' }">
+                        <a href="">Other</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <article class="row productRow" ng-show="showProduct == 'fruit'">
+        <div ng-repeat="product in productdetails | filter: { type: 'fruit' }:true"
+             class="col-sm-6 col-md-4 col-lg-3 col-centered">
+            <a href="" class="productContainer" data-toggle="modal" data-target="#modal-produce"
+               ng-click="productModal.name = product.name; productModal.description = product.description;
+               productModal.imageFile = '/img/produce/large/' + product.imagefilename">
+                <figure>
+                    <img ng-src="/img/produce/{{product.imagefilename}}" width="360" height="240"
+                         alt="{{product.name}}">
+                    <figcaption>
+                        <p>{{product.name}}</p>
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+    </article>
+    <article class="row productRow" ng-show="showProduct == 'veg'">
+        <div ng-repeat="product in productdetails | filter: { type: 'vegetable' }:true"
+             class="col-sm-6 col-md-4 col-lg-3 col-centered">
+            <a href="" class="productContainer" data-toggle="modal" data-target="#modal-produce"
+               ng-click="productModal.name = product.name; productModal.description = product.description;
+               productModal.imageFile = '/img/produce/large/' + product.imagefilename">
+                <figure>
+                    <img ng-src="/img/produce/{{product.imagefilename}}" width="360" height="240"
+                         alt="{{product.name}}">
+                    <figcaption>
+                        <p>{{product.name}}</p>
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+    </article>
+    <article class="row productRow" ng-show="showProduct == 'other'">
+        <div ng-repeat="product in productdetails | filter: { type: 'other' }:true"
+             class="col-sm-6 col-md-4 col-lg-3 col-centered">
+            <a href="" class="productContainer" data-toggle="modal" data-target="#modal-produce"
+               ng-click="productModal.name = product.name; productModal.description = product.description;
+               productModal.imageFile = '/img/produce/large/' + product.imagefilename">
+                <figure>
+                    <img ng-src="/img/produce/{{product.imagefilename}}" width="360" height="240"
+                         alt="{{product.name}}">
+                    <figcaption>
+                        <p>{{product.name}}</p>
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+    </article>
+</section>
+
+<product-modal></product-modal>
+<footer-bar></footer-bar>
+
+
+
+

@@ -1,0 +1,32 @@
+<navbar></navbar>
+<div class="container newsContainer">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>News and events</h1>
+        </div>
+    </div>
+
+    <div class="row">
+
+        <aside class="col-sm-4 col-sm-push-8">
+            <newsletter-form></newsletter-form>
+        </aside>
+
+        <section class="col-sm-8 col-sm-pull-4">
+
+            <article ng-repeat="article in news" class="newsStory" ng-class-odd="'newsStoryRight'"
+                 ng-class-even="'newsStoryLeft'">
+                <figure>
+                    <img ng-src="/img/news/{{article.mediaFilename}}" alt="{{article.mediaAlternative}}">
+                </figure>
+                <h3>{{article.title}}</h3>
+                <p class="newsDate">{{article.author}}, {{article.date}}</p>
+                <p class="newsText">{{article.content}}</p>
+            </article>
+
+        </section>
+    </div>
+</div>
+
+<footer-bar></footer-bar>
