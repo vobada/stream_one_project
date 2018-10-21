@@ -1,9 +1,9 @@
 {
-  "name": "band-app",
+  "name": "wizzy",
   "private": false,
   "version": "1.0.0",
-  "description": "Stream 1 Final Project",
-  "repository": "https://github.com/GunnerJnr/_CodeInstitute/tree/master/Stream-1/Front-End-Development/Final-Project",
+  "description": "Stream 1 Project",
+  "repository": "https://github.com/vobada/stream_one_project",
   "license": "??",
   "devDependencies": {
     "http-server": "^0.6.1",
